@@ -57,8 +57,8 @@ if exist "%PTF_Root%drop" (
 )
 
 if /i "%~1"=="formodel" (
-	%buildtool% %currentPath%\deploy\Installer\ProtocolTestFrameworkInstaller.wixproj /p:FORMODEL="1" /t:Clean;Rebuild /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=%ptfsnk%
+	%buildtool% %currentPath%\deploy\Installer\ProtocolTestFrameworkInstaller.wixproj /p:FORMODEL="1" /t:Clean;Rebuild /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=%ptfsnk% /p:VisualStudioVersion=11.0
 ) else (
-	%buildtool% %currentPath%\deploy\Installer\ProtocolTestFrameworkInstaller.wixproj /t:Clean;Rebuild /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=%ptfsnk%
+	%buildtool% %currentPath%\deploy\Installer\ProtocolTestFrameworkInstaller.wixproj /t:Clean;Rebuild /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=%ptfsnk% /p:VisualStudioVersion=11.0
 )
 
